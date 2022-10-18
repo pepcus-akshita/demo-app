@@ -7,24 +7,25 @@ const MyClock = () => {
         <div>
             <h2>This is my clock display</h2>
             <p>The date today is - {new Date().toLocaleDateString()}.</p>
-            <p>The time is - {new Date().toLocaleTimeString()}.</p>
-            {/*{setInterval(Tick,1000)}*/}
+            <p>The time is - <span id={"demo"}> </span> </p>
 
         </div>
     );
 }
 
-export default MyClock;
-//
-//
-// function Tick()
+// export default MyClock;
+
+
+
+
+
+// setInterval(myTimer, 1000);
+
+// function myTimer() {
+//     const d = new Date();
+//     document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+// }
+// window.onload = function ()
 // {
-//
-//     return(
-//         const d = new Date().toLocaleTimeString()
-//
-//
-//
-//     );
-//
+//     myTimer();
 // }

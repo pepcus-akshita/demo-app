@@ -10,22 +10,23 @@ import {
 import DemoApp from "./Components/DemoApp";
 import Navbar from "./Navbar";
 import Test from "./Components/FunctionComp";
-// import MyClass from "./Classcomp.js" ;
-import Tick from "./Components/MyClock";
-import MyClock from "./Components/MyClock";
+// import MyClock from "./Components/MyClock";
+import MyClass from "./Components/Classcomp";
+import Dataview from "./Components/Dataview";
+import Dataview2 from "./Components/Dataview2";
+// import ColorContext from "./Context/ColorContext";
 
 
 function App() {
     return (
 <Router>
     <Navbar />
-    {/*<link to="/" />*/}
+    <link to="/" />
     <ul>
-
         <li>
             {/*<img src={"/reactlogo.svg"} style={{width: "5px" , height: "8px"}}/>*/}
-            <Link to="/Demoapp">DemoApp</Link>
-            {/*<Link to="/">DemoApp</Link>*/}
+            {/*<Link to="/Demoapp">DemoApp</Link>*/}
+            <Link exact="true" to="/">DemoApp</Link>
         </li>
 
         <li>
@@ -34,8 +35,17 @@ function App() {
         <li>
             <Link to="/functionComp">FunctionComp</Link>
         </li>
+        {/*<li>*/}
+        {/*    <Link to="/Myclock">MyClock</Link>*/}
+        {/*</li>*/}
         <li>
-            <Link to="/Myclock">MyClock</Link>
+            <Link to="/Classcomp">Classcomp</Link>
+        </li>
+        <li>
+            <Link to="/Dataview">Dataview</Link>
+        </li>
+        <li>
+            <Link to="/Dataview2">Dataview2</Link>
         </li>
     </ul>
 
@@ -43,13 +53,18 @@ function App() {
     <Switch>
         {/*<Route path='/' component={DemoApp} />*/}
 
-            <Route path='/Demoapp' component={DemoApp} />
+            <Route exact={true} path='/' component={DemoApp} />
 
             <Route path='/about' component={About} />
 
 <Route path='/functionComp' component={Test} />
 
-        <Route path='/Myclock' component={MyClock} />
+        {/*<Route path='/Myclock' component={MyClock} />*/}
+        <Route path='/Classcomp' component={MyClass} />
+
+        <Route path='/Dataview' component={Dataview} />
+
+        <Route path='/Dataview2' component={Dataview2} />
 
         </Switch>
 </Router>

@@ -1,6 +1,6 @@
 import React from "react";
 
-class MyClass extends React.Component {
+export class MyClass extends React.Component {
     constructor() {
         super();
         this.state = {fname: "Akshita",
@@ -17,3 +17,5 @@ class MyClass extends React.Component {
         );
     }
 }
+
+export default MyClass;
